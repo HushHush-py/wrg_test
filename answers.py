@@ -1,4 +1,4 @@
-class CyclesQueue:
+class CyclesLine:
     def __init__(self, size):
         self._items = [0] * size
         self._head = 0
@@ -9,7 +9,7 @@ class CyclesQueue:
 
     def push(self, el):
         if self.full():
-            raise Exception("Queue is full!")
+            raise Exception("Line is full!")
 
         self._items[self._head] = el
 
@@ -18,7 +18,7 @@ class CyclesQueue:
 
     def pop(self):
         if self.empty():
-            raise Exception("Queue is empty!")
+            raise Exception("Line is empty!")
 
         item = self._items[self._tail]
 
